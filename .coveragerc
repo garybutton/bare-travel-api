@@ -1,0 +1,10 @@
+[run]
+branch = True
+omit = *migrations*,
+       *urls*,
+       *test*,
+       *admin*,
+       ./bare-travel/config/*,
+       ./bare-travel/manage.py,
+       ./bare-travel/wsgi.py,
+       *__init__*

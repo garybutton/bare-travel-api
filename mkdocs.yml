@@ -1,0 +1,11 @@
+site_name: bare-travel
+site_description: Django REST API
+repo_url: https://github.com/garybutton/bare-travel-api
+site_dir: site
+copyright: Copyright &copy; 2015, <a href="https://github.com/garybutton">garybutton</a>.
+
+pages:
+  - Home: 'index.md'
+  - API:
+    - Authentication: 'api/authentication.md'
+    - Users: 'api/users.md'

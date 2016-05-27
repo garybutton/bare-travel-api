@@ -53,7 +53,7 @@ class Common(Configuration):
     )
 
     # Postgres
-    DATABASES = values.DatabaseURLValue('postgres://localhost/bare-travel')
+    DATABASES = values.DatabaseURLValue('postgres://localhost/baretravel')
 
     # General
     APPEND_SLASH = values.BooleanValue(False)

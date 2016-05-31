@@ -16,10 +16,14 @@ class Common(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
 
-
-        # Third party apps
+        # Auth and users
         'rest_framework',            # utilities for rest apis
         'rest_framework.authtoken',  # token authentication
+        'allauth',
+        'allauth.account',
+        'rest_auth.registration',
+
+        # Third party apps
         'django_rq',                 # asynchronous queuing
         'versatileimagefield',       # image manipulation
 

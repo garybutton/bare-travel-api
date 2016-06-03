@@ -13,6 +13,7 @@ class StoryManager(models.Manager):
 
 
 class Story(models.Model):
+    # author = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="posts", verbose_name=_("Author"))
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
     title = models.CharField(max_length=120)
     slug = models.SlugField(unique=True)

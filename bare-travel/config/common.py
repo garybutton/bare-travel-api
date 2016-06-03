@@ -15,12 +15,14 @@ class Common(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        'django.contrib.sites',
 
         # Auth and users
         'rest_framework',            # utilities for rest apis
         'rest_framework.authtoken',  # token authentication
         'allauth',
         'allauth.account',
+        'rest_auth',
         'rest_auth.registration',
 
         # Third party apps
@@ -28,11 +30,8 @@ class Common(Configuration):
         'versatileimagefield',       # image manipulation
 
         # Your apps
-        'authentication',
         'users',
-
         'stories'
-
     )
 
     # https://docs.djangoproject.com/en/1.8/topics/http/middleware/
@@ -84,6 +83,8 @@ class Common(Configuration):
     # Media files
     MEDIA_ROOT = join(os.path.dirname(BASE_DIR), 'media')
     MEDIA_URL = '/media/'
+
+    SITE_ID = 1
 
     TEMPLATES = [
         {
@@ -183,10 +184,14 @@ class Common(Configuration):
             'rest_framework.permissions.IsAuthenticated',
         ],
         'DEFAULT_AUTHENTICATION_CLASSES': (
-            'rest_framework.authentication.SessionAuthentication',
-            'rest_framework.authentication.TokenAuthentication',
+            # 'rest_framework.authentication.SessionAuthentication',
+            # 'rest_framework.authentication.TokenAuthentication',
+            'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         )
     }
+
+    # Rest auth
+    REST_USE_JWT = True
 
     # Versatile Image Field
     VERSATILEIMAGEFIELD_SETTINGS = {

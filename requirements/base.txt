@@ -14,7 +14,8 @@ django-model-utils==2.4
 # Rest apis
 djangorestframework==3.3.3
 django-filter==0.13.0
-django-rest-auth[extras]==0.7.0
+django-rest-auth==0.7.0
+djangorestframework-jwt==1.8.0
 
 # Static files
 whitenoise==3.0
